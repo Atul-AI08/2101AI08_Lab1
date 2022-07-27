@@ -18,4 +18,11 @@ void main(){
         scanf("%d",&c);
         printf("The difference of the numbers %d and %d is %d",b,c,b-c);
     }
+    else if (a=='*'){
+        printf("Enter the first number: ");
+        scanf("%d",&b);
+        printf("Enter the second number: ");
+        scanf("%d",&c);
+        printf("The product of the numbers %d and %d is %d",b,c,b*c);
+    }
 }
