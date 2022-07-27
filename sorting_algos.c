@@ -14,6 +14,20 @@ void insertionSort(int arr[], int n)
         arr[j + 1] = temp;
     }
 }
+void selectionSort(int arr[], int n)
+{
+    int i, j, temp;
+    for (i = 0; i < n - 1; i++)
+    {
+        for (j = i + 1; j < n; j++)
+            if (arr[j] < arr[i])
+            {
+                temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+    }
+}
 void main()
 {
     int n;
@@ -32,6 +46,14 @@ void main()
     {
         insertionSort(arr, n);
         printf("The array after performing insertion sort is: \n");
+        for (int i = 0; i < n; i++)
+        {
+            printf("%d ", arr[i]);
+        }
+    }
+    else if (a==2){
+        selectionSort(arr,n);
+        printf("The array after performing selection sort is: \n");
         for (int i = 0; i < n; i++)
         {
             printf("%d ", arr[i]);
