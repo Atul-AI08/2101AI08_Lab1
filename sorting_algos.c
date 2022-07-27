@@ -28,6 +28,18 @@ void selectionSort(int arr[], int n)
             }
     }
 }
+void bubbleSort(int arr[], int n)
+{
+    int i, j, temp;
+    for (i = 0; i < n - 1; i++){
+        for (j = 0; j < n - i - 1; j++)
+            if (arr[j] > arr[j + 1]){
+                temp=arr[j];
+                arr[j]=arr[j+1];
+                arr[j+1]=temp;
+            }
+    }
+}
 void main()
 {
     int n;
@@ -54,6 +66,14 @@ void main()
     else if (a==2){
         selectionSort(arr,n);
         printf("The array after performing selection sort is: \n");
+        for (int i = 0; i < n; i++)
+        {
+            printf("%d ", arr[i]);
+        }
+    }
+    else if (a==3){
+        bubbleSort(arr,n);
+        printf("The array after performing bubble sort is: \n");
         for (int i = 0; i < n; i++)
         {
             printf("%d ", arr[i]);
